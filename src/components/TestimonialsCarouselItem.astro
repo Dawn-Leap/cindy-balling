@@ -1,0 +1,18 @@
+---
+interface Props {
+    isActive?: boolean;
+    testimonialText: string;
+    author: string;
+}
+
+const { isActive = false, testimonialText, author } = Astro.props;
+---
+
+<div class={`carousel-item ${isActive ? "active" : ""}`}>
+    <div class="text-container">
+        <p>
+            "{testimonialText}"
+        </p>
+        <h3>{author}</h3>
+    </div>
+</div>

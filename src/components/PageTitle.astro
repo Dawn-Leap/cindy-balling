@@ -1,0 +1,12 @@
+---
+interface Props {
+    title: string;
+    bgImagePath: string;
+}
+
+const { title, bgImagePath } = Astro.props;
+---
+
+<div class="page-title" style={`background-image: url(${bgImagePath});`}>
+    <h1>{title}</h1>
+</div>

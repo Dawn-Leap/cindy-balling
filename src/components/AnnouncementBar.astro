@@ -1,0 +1,61 @@
+---
+import announcements from "../data/announcements.json";
+
+interface Props {
+    sticky?: boolean;
+}
+
+const { sticky = false } = Astro.props;
+---
+
+{
+    announcements.length > 0 && (
+        <div
+            id="announcement-bar"
+            class={`alert text-light bg-primary border-0 border-bottom border-black text-center m-0 p-2 alert-dismissible fade show ${
+                sticky ? "sticky" : ""
+            }`}
+            role="alert"
+        >
+            {announcements.map((announcement) => (
+                <div id="announcement-bar-content">
+                    <strong>{announcement.title}</strong>&nbsp;
+                    {announcement.message}&nbsp;
+                    {announcement.link && (
+                        <a
+                            id="announcement-link"
+                            class="text-secondary"
+                            href={announcement.link}
+                        >
+                            Learn more
+                        </a>
+                    )}
+                </div>
+            ))}
+            <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="alert"
+                aria-label="Close"
+            />
+        </div>
+    )
+}
+<style lang="scss">
+    #announcement-bar {
+        z-index: 2;
+        border-radius: 0;
+        &.sticky {
+            position: fixed;
+            left: 0;
+            right: 0;
+            margin: 0 auto;
+        }
+        #announcement-bar-content {
+            margin: 0 32px;
+        }
+        button[data-bs-dismiss="alert"] {
+            padding: 12px;
+        }
+    }
+</style>

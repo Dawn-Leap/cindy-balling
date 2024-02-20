@@ -1,0 +1,34 @@
+[
+    {
+        "name": "Home",
+        "path": "/",
+        "isButton": false,
+        "isDropdown": false,
+        "dropdownItems": null,
+        "hasAnnouncements": true
+    },
+    {
+        "name": "About",
+        "path": "/about",
+        "isButton": false,
+        "isDropdown": false,
+        "dropdownItems": null,
+        "hasAnnouncements": false
+    },
+    {
+        "name": "Contact",
+        "path": "/contact",
+        "isButton": false,
+        "isDropdown": false,
+        "dropdownItems": null,
+        "hasAnnouncements": false
+    },
+    {
+        "name": "Sign Up",
+        "path": "/register",
+        "isButton": true,
+        "isDropdown": false,
+        "dropdownItems": null,
+        "hasAnnouncements": true
+    }
+]

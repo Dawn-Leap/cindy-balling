@@ -1,0 +1,49 @@
+---
+import settings from "../data/settings.json";
+---
+
+<footer class="border-top bg-dark">
+    <div
+        class="container d-flex flex-wrap justify-content-between align-items-center py-3 my-4"
+    >
+        <div class="d-flex align-items-center">
+            <a href="/" class="mb-3 me-2 mb-md-0 text-decoration-none lh-1">
+                <img
+                    src="/logos/logo_badge_white_small.webp"
+                    alt=`${settings.businessName} logo`
+                    height="50"
+                />
+            </a>
+            <span class="mb-3 mb-md-0 text-white"
+                >© 2023 {settings.businessName}</span
+            >
+        </div>
+
+        <ul class="nav justify-content-end list-unstyled d-flex">
+            <li class="ms-3">
+                <a
+                    class="text-white"
+                    href="https://www.facebook.com/cindy.balling/"
+                >
+                    <img src="/socials/facebook.svg" alt="Facebook Logo" />
+                </a>
+            </li>
+            <li class="ms-3">
+                <a
+                    class="text-white"
+                    href="https://www.instagram.com/cindyballinghealth/"
+                >
+                    <img src="/socials/instagram.svg" alt="Instagram Logo" />
+                </a>
+            </li>
+            <li class="ms-3">
+                <a
+                    class="text-white"
+                    href="https://www.linkedin.com/in/cindy-balling-2bb981237/"
+                >
+                    <img src="/socials/linkedin.svg" alt="LinkedIn Logo" />
+                </a>
+            </li>
+        </ul>
+    </div>
+</footer>

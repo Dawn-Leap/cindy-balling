@@ -1,0 +1,25 @@
+---
+interface Props {
+    text: string;
+    bgImagePath: string;
+    link: string;
+}
+
+const { text, bgImagePath, link } = Astro.props;
+---
+
+<div class="col">
+    <a href={link}>
+        <div class="card shadow-sm">
+            <div
+                class="bg-image"
+                style={`background-image: url(${bgImagePath});`}
+            >
+            </div>
+            <div class="card-body">
+                <h3 class="card-text">{text}</h3>
+                <p class="hover-text text-muted">Learn more</p>
+            </div>
+        </div>
+    </a>
+</div>

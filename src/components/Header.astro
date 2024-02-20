@@ -1,0 +1,264 @@
+---
+import settings from "../data/settings.json";
+import { links } from "../utils/parseNavigation.ts";
+import AnnouncementBar from "./AnnouncementBar.astro";
+import announcements from "../data/announcements.json";
+
+interface Props {
+    logoPath: string;
+    logoHeight: number;
+    fill?: boolean;
+    sticky?: boolean;
+}
+
+const { fill = false, sticky = false, logoPath, logoHeight } = Astro.props;
+
+const currentPath = Astro.url.pathname;
+
+// Function to get the top-level path from a given path
+const getTopLevelPath = (path: string | null) => {
+    if (path === null) {
+        return null;
+    } else if (path === "/") {
+        return "/";
+    }
+    const parts = path.split("/");
+    return "/" + parts.filter(Boolean)[0];
+};
+
+// Finding the current page link
+const currentPageLink = links.find(
+    (link) => link.path === getTopLevelPath(currentPath)
+);
+
+// Determine if the announcement bar should be shown
+const showAnnouncementBar = currentPageLink
+    ? currentPageLink.hasAnnouncements &&
+      announcements.some((announcement) => announcement.active)
+    : false;
+
+// Function to check if the path is active
+const isActive = (path: string) => {
+    const topLevelCurrentPath = getTopLevelPath(currentPath);
+    const topLevelLinkPath = getTopLevelPath(path);
+    return topLevelLinkPath === topLevelCurrentPath;
+};
+
+// Establish starting last section for dropdown menus
+let lastSection: number = 0;
+---
+
+{showAnnouncementBar && <AnnouncementBar sticky={sticky ? true : false} />}
+<header
+    id="page-header"
+    class={`${fill ? "fill" : "bg-dark"} ${sticky ? "sticky" : ""}`}
+>
+    {
+        showAnnouncementBar && (fill || sticky) && (
+            <div id="announcement-spacer" />
+        )
+    }
+    <nav
+        id="main-navbar"
+        class="navbar navbar-dark navbar-expand-lg border-bottom"
+        aria-label="Main navbar"
+    >
+        <div class="container">
+            <a class="navbar-brand" href="/">
+                <img
+                    id="header-logo"
+                    src={logoPath}
+                    height={logoHeight}
+                    alt=`${settings.businessName} logo`
+                />
+            </a>
+            <button
+                class="navbar-toggler ms-auto"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#page-links"
+                aria-controls="page-links"
+                aria-expanded="false"
+                aria-label="Toggle navigation"
+            >
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="page-links">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0 align-items-center">
+                    {
+                        links.map((link) => {
+                            if (
+                                link.isDropdown &&
+                                link.isDropdown &&
+                                (link.dropdownItems?.length || 0) > 0
+                            ) {
+                                return (
+                                    <li class="nav-item dropdown" role="button">
+                                        <a
+                                            class="nav-link dropdown-toggle text-white"
+                                            data-bs-toggle="dropdown"
+                                            aria-expanded="false"
+                                        >
+                                            {link.name}
+                                        </a>
+                                        <ul class="dropdown-menu">
+                                            {link.dropdownItems?.map(
+                                                (sublink, index) => {
+                                                    let insertHr =
+                                                        index !== 0 &&
+                                                        sublink.section !==
+                                                            lastSection;
+                                                    lastSection =
+                                                        sublink.section ?? 0;
+                                                    return (
+                                                        <>
+                                                            {insertHr && (
+                                                                <li class="submenu-item">
+                                                                    <hr />
+                                                                </li>
+                                                            )}
+                                                            <li>
+                                                                <a
+                                                                    class="dropdown-item"
+                                                                    href={
+                                                                        sublink.path
+                                                                    }
+                                                                >
+                                                                    {
+                                                                        sublink.name
+                                                                    }
+                                                                </a>
+                                                            </li>
+                                                        </>
+                                                    );
+                                                }
+                                            )}
+                                        </ul>
+                                    </li>
+                                );
+                            } else if (link.isButton) {
+                                return (
+                                    <li class="nav-item">
+                                        <a class="nav-link" href={link.path}>
+                                            <button class="btn btn-secondary">
+                                                {link.name}
+                                            </button>
+                                        </a>
+                                    </li>
+                                );
+                            } else {
+                                const linkActive =
+                                    link.path !== null && isActive(link.path);
+                                return (
+                                    <li class="nav-item">
+                                        <a
+                                            class={`nav-link text-white ${
+                                                linkActive ? "active" : ""
+                                            }`}
+                                            aria-current={
+                                                linkActive ? "page" : undefined
+                                            }
+                                            href={link.path}
+                                        >
+                                            {link.name}
+                                        </a>
+                                    </li>
+                                );
+                            }
+                        })
+                    }
+                </ul>
+            </div>
+        </div>
+    </nav>
+</header>
+{sticky && !fill && <div id="header-spacer" />}
+
+<style lang="scss">
+    header#page-header {
+        user-select: none;
+
+        &.fill,
+        &.sticky {
+            z-index: 1;
+            left: 0;
+            right: 0;
+            margin: 0 auto;
+        }
+
+        &.fill {
+            position: absolute;
+        }
+
+        &.sticky {
+            position: fixed;
+        }
+        a.active {
+            font-weight: bold;
+        }
+        a.nav-link:hover {
+            color: lightgreen !important;
+        }
+    }
+    .submenu-item hr {
+        margin: 5px;
+    }
+</style>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        let announcementBar = document.getElementById("announcement-bar");
+        let announcementSpacer = document.getElementById("announcement-spacer");
+        let pageHeader = document.getElementById("page-header");
+        let headerSpacer = document.getElementById("header-spacer");
+        console.log(announcementBar);
+
+        // Check if both announcementBar and announcementSpacer exist
+        if (announcementBar && announcementSpacer) {
+            // Set the height of announcementSpacer to match the height of announcementBar
+            announcementSpacer.style.height =
+                announcementBar.clientHeight + "px";
+            console.log("test2");
+        }
+
+        // Check if both pageHeader and headerSpacer exist
+        if (pageHeader && headerSpacer) {
+            // Set the height of headerSpacer to match the height of pageHeader
+            headerSpacer.style.height = pageHeader.clientHeight + "px";
+        }
+    });
+    document.addEventListener("DOMContentLoaded", function () {
+        const announcementSpacer = document.getElementById(
+            "announcement-spacer"
+        );
+
+        // Create a MutationObserver
+        const observer = new MutationObserver(function (
+            mutationsList,
+            observer
+        ) {
+            for (const mutation of mutationsList) {
+                if (mutation.type === "childList" && mutation.removedNodes) {
+                    for (const removedNode of mutation.removedNodes) {
+                        // Check if the removed node is an HTMLElement and has the id 'announcement-bar'
+                        if (
+                            removedNode instanceof HTMLElement &&
+                            removedNode.id === "announcement-bar"
+                        ) {
+                            // Remove the announcement spacer
+                            if (announcementSpacer) {
+                                announcementSpacer.remove();
+                            }
+                            // Disconnect the observer since we've achieved the desired action
+                            observer.disconnect();
+                        }
+                    }
+                }
+            }
+        });
+
+        // Start observing changes in the DOM
+        observer.observe(document.body, { childList: true, subtree: true });
+    });
+</script>

@@ -12020,16 +12020,15 @@ body main {
 
 form input,
 form textarea {
-  border-radius: 0 !important;
   margin-bottom: 5px;
   resize: none;
 }
 form input:not([type=submit]) {
   border: none;
-  border-bottom: 1px solid lightgray;
+  border-bottom: 1px solid #47b578;
 }
 form textarea {
-  border: 1px solid lightgray !important;
+  border: 1px solid #47b578 !important;
 }
 form div.form-group {
   margin-bottom: 20px;

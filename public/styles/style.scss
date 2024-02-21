@@ -175,16 +175,16 @@ body {
 form {
     input,
     textarea {
-        border-radius: 0 !important;
+        // border-radius: 0 !important;
         margin-bottom: 5px;
         resize: none;
     }
     input:not([type="submit"]) {
         border: none;
-        border-bottom: 1px solid $gray;
+        border-bottom: 1px solid $faded-primary;
     }
     textarea {
-        border: 1px solid $gray !important;
+        border: 1px solid $faded-primary !important;
     }
     div.form-group {
         margin-bottom: 20px;

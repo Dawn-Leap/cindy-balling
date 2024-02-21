@@ -2,4 +2,58 @@
 import Layout from "../layouts/Layout.astro";
 ---
 
-<Layout title="about">About</Layout>
+<Layout title="about">
+    <div class="text-light bg-primary text-center p-1">
+        <h1>About</h1>
+    </div>
+    <section>
+        <div class="container my-5">
+            <div class="row bio">
+                <div class="profile-image col-lg-6 col-xl-4 col-xxl-3 mb-3">
+                    <img
+                        src="/images/cindy-profile.webp"
+                        alt="Cindy Balling Profile Image"
+                        class="profile img-fluid d-block mx-auto"
+                    />
+                </div>
+                <div
+                    class="col-lg-6 col-xl-8 col-xxl-9 content d-flex align-items-center"
+                >
+                    <div class="text">
+                        <h2>Meet Cindy Balling</h2>
+                        <p>
+                            Hi, I'm Cindy and I am a diabetes reversal
+                            specialist! I am passionate about helping people
+                            with diabetes live their best life. It has been so
+                            hard for me to see many of my family members
+                            struggle with diabetes. I understand what you might
+                            be going through. My mission is to help everyone
+                            achieve a healthy lifestyle. Please join my coaching
+                            program, sign up for my regular diabetes
+                            discussions, or browse around this website to learn
+                            more. You can change your life and reach your goals.
+                        </p>
+                        <p>
+                            I am a lifestyle medicine coach through the American
+                            College of Lifestyle Medicine. I specialize in
+                            diabetes reversal and plant-based nutrition. I
+                            earned my bachelor's degree in Exercise Science from
+                            the University of Utah. I have experience in
+                            corporate wellness, working with the developmentally
+                            disabled, and with elite athletes. I can't wait to
+                            meet you!
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</Layout>
+<style lang="scss">
+    .profile {
+        // float: right;
+        border-radius: 50%;
+        // max-width: 500px;
+        height: auto;
+    }
+</style>

@@ -20,6 +20,8 @@ $white: $theme-background;
 $black: $theme-text;
 $gray: lightgray;
 $accent: $theme-accent;
+$faded-primary: #47b578;
+$faded-secondary: #fff36f;
 
 @import "./bootstrap/bootstrap.scss";
 // @import url("https://fonts.googleapis.com/css2?family=Belleza&family=Lato&display=swap");
@@ -41,6 +43,18 @@ body {
     }
 }
 
+.bg-accent {
+    background-color: $accent;
+}
+
+.bg-faded-primary {
+    background-color: $faded-primary;
+}
+
+.bg-faded-secondary {
+    background-color: $faded-secondary;
+}
+
 // div#announcements-bar {
 //     // font-family: "Lato", sans-serif;
 //     color: $dark;
@@ -57,34 +71,32 @@ body {
 //     }
 // }
 
-.page-title {
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    min-height: 180px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    margin-bottom: 30px;
-    h1 {
-        color: $dark;
-        font-size: 3rem;
-    }
-}
+// .page-title {
+//     background-color: $primary;
+//     // min-height: 180px;
+//     display: flex;
+//     justify-content: center;
+//     align-items: center;
+//     text-align: center;
+//     margin-bottom: 30px;
+//     // h1 {
+//     //     color: $dark;
+//     //     font-size: 3rem;
+//     // }
+// }
 
 // section {
 //     padding: 30px 0;
 // }
 
-// .hero {
-//     background-size: cover;
-//     background-position: center;
-//     background-repeat: no-repeat;
-//     min-height: 500px;
-//     display: flex;
-//     align-items: center;
-// }
+.hero {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    // min-height: 500px;
+    // display: flex;
+    // align-items: center;
+}
 
 // .mask {
 //     background-color: rgba(255, 255, 255, 0.25);

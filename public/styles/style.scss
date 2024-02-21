@@ -191,17 +191,17 @@ form {
     }
 }
 
-// ul {
-//     li.phone {
-//         list-style-image: url("/icons/telephone-fill.svg");
-//     }
-//     li.email {
-//         list-style-image: url("/icons/envelope-fill.svg");
-//     }
-//     li.address {
-//         list-style-image: url("/icons/geo-alt-fill.svg");
-//     }
-// }
+ul {
+    li.phone {
+        list-style-image: url("/icons/telephone-fill.svg");
+    }
+    li.email {
+        list-style-image: url("/icons/envelope-fill.svg");
+    }
+    li.address {
+        list-style-image: url("/icons/geo-alt-fill.svg");
+    }
+}
 
 .card {
     position: relative;

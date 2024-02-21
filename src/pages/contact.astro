@@ -2,4 +2,57 @@
 import Layout from "../layouts/Layout.astro";
 ---
 
-<Layout title="contact">Contact</Layout>
+<Layout title="contact">
+    <section id="contact">
+        <div class="container my-5">
+            <div class="row">
+                <div class="col-lg-6 col-xl-7 col-xxl-8">
+                    <h1>Contact Us</h1>
+                    <form>
+                        <div class="form-group">
+                            <label for="name" hidden="">Name:</label>
+                            <input
+                                type="text"
+                                class="form-control"
+                                id="name"
+                                placeholder="Name*"
+                            />
+                            <label for="email" hidden="">Email:</label>
+                            <input
+                                type="email"
+                                class="form-control"
+                                id="email"
+                                placeholder="Email*"
+                            />
+                        </div>
+                        <div class="form-group">
+                            <label for="message" hidden="">Message:</label>
+                            <textarea
+                                class="form-control"
+                                id="message"
+                                rows="8"
+                                placeholder="Message"></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary"
+                            >Submit</button
+                        >
+                    </form>
+                </div>
+                <div class="col-lg-1 horizontal-divider">
+                    <hr class="d-lg-none" />
+                    <div class="line d-none d-lg-block"></div>
+                </div>
+                <div class="col-lg-5 col-xl-4 col-xxl-3">
+                    <h2>Contact Information</h2>
+                    <ul class="contact-info">
+                        <li class="phone">(000) 000-0000</li>
+                        <li class="email">info@cindyballing.com</li>
+                        <!-- <li class="address">
+                            1525 Mariposa Dr #900, Mesquite, TX 75150
+                        </li> -->
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+</Layout>

@@ -50,13 +50,15 @@ import Layout from "../layouts/Layout.astro";
     </section>
     <section>
         <div class="container my-5">
-            <h2>About the Program</h2>
+            <h2>My Programs</h2>
+            <h3>Program 1</h3>
             <p>
                 Lorem, ipsum dolor sit amet consectetur adipisicing elit. Libero
                 ducimus sint in maiores similique aut inventore voluptatibus
                 numquam ex minus repellat incidunt optio beatae quaerat, impedit
                 fugit, hic dolores distinctio.
             </p>
+            <h3>Program 2</h3>
             <p>
                 Lorem ipsum, dolor sit amet consectetur adipisicing elit.
                 Consequuntur commodi debitis quos consectetur nostrum. Est sunt,
@@ -67,6 +69,7 @@ import Layout from "../layouts/Layout.astro";
                 Reiciendis repudiandae similique consectetur a hic possimus
                 dolor ea neque quis, dicta quibusdam!
             </p>
+            <h3>Program 3</h3>
             <p>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit.
                 Laudantium velit, ipsa modi ducimus repudiandae corporis error,
@@ -80,6 +83,94 @@ import Layout from "../layouts/Layout.astro";
                 nostrum, doloribus voluptates. Dolorum perspiciatis iure
                 repellat, quo ab quam maxime minima. Eligendi?
             </p>
+        </div>
+    </section>
+    <section>
+        <div class="container my-5">
+            <h2>FAQs</h2>
+            <div class="accordion" id="accordionExample">
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button
+                            class="accordion-button"
+                            type="button"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#collapseOne"
+                            aria-expanded="true"
+                            aria-controls="collapseOne"
+                        >
+                            Frequently Asked Question #1
+                        </button>
+                    </h2>
+                    <div
+                        id="collapseOne"
+                        class="accordion-collapse collapse show"
+                        data-bs-parent="#accordionExample"
+                    >
+                        <div class="accordion-body">
+                            Lorem ipsum dolor, sit amet consectetur adipisicing
+                            elit. A, distinctio commodi at ipsam quos rem quae,
+                            beatae quo excepturi aliquid inventore provident
+                            dignissimos hic? Quod in obcaecati nobis
+                            necessitatibus hic?
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button
+                            class="accordion-button collapsed"
+                            type="button"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#collapseTwo"
+                            aria-expanded="false"
+                            aria-controls="collapseTwo"
+                        >
+                            Frequently Asked Question #2
+                        </button>
+                    </h2>
+                    <div
+                        id="collapseTwo"
+                        class="accordion-collapse collapse"
+                        data-bs-parent="#accordionExample"
+                    >
+                        <div class="accordion-body">
+                            Lorem ipsum dolor sit amet consectetur adipisicing
+                            elit. Ducimus dolores, delectus provident alias
+                            accusantium, dolore labore inventore esse facere
+                            nostrum ab laboriosam asperiores odit mollitia illo
+                            numquam aliquid obcaecati voluptates.
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button
+                            class="accordion-button collapsed"
+                            type="button"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#collapseThree"
+                            aria-expanded="false"
+                            aria-controls="collapseThree"
+                        >
+                            Frequently Asked Question #3
+                        </button>
+                    </h2>
+                    <div
+                        id="collapseThree"
+                        class="accordion-collapse collapse"
+                        data-bs-parent="#accordionExample"
+                    >
+                        <div class="accordion-body">
+                            Lorem, ipsum dolor sit amet consectetur adipisicing
+                            elit. Error, libero aspernatur, quasi et
+                            reprehenderit, modi odio perspiciatis iure ipsam
+                            sequi accusantium corrupti alias cupiditate labore
+                            tempora! Quas distinctio in laudantium.
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 </Layout>

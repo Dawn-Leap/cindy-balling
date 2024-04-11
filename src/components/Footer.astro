@@ -1,4 +1,5 @@
 ---
+const today = new Date();
 import settings from "../data/settings.json";
 ---
 
@@ -15,7 +16,7 @@ import settings from "../data/settings.json";
                 />
             </a>
             <span class="mb-3 mb-md-0 text-white"
-                >© 2023 {settings.businessName}</span
+                >&copy; {today.getFullYear()} {settings.businessName}</span
             >
         </div>
 
@@ -31,9 +32,25 @@ import settings from "../data/settings.json";
             <li class="ms-3">
                 <a
                     class="text-white"
-                    href="https://www.instagram.com/cindyballinghealth/"
+                    href="https://www.instagram.com/latterdayhealth/"
                 >
                     <img src="/socials/instagram.svg" alt="Instagram Logo" />
+                </a>
+            </li>
+            <li class="ms-3">
+                <a
+                    class="text-white"
+                    href="https://www.threads.net/@latterdayhealth/"
+                >
+                    <img src="/socials/threads.svg" alt="Threads Logo" />
+                </a>
+            </li>
+            <li class="ms-3">
+                <a
+                    class="text-white"
+                    href="https://www.youtube.com/@cindyballing/"
+                >
+                    <img src="/socials/youtube.svg" alt="YouTube Logo" />
                 </a>
             </li>
             <li class="ms-3">

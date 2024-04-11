@@ -6,11 +6,11 @@ import Layout from "../layouts/Layout.astro";
     <section
         id="hero"
         class="hero"
-        style="background-image: url(/images/health-hero-web.webp);"
+        style="background-image: url(/images/Hero-Option-8.png);"
     >
         <div class="container h-100 col-xxl-8 px-4 py-5">
             <div class="row align-items-center h-100 g-5 py-5">
-                <div class="col-lg-6">
+                <div class="col-lg-6 p-4 hero-text">
                     <h1 class="display-5 fw-bold text-body-emphasis lh-1 mb-3">
                         Transform Your Health with Science and Heart
                     </h1>
@@ -289,5 +289,10 @@ import Layout from "../layouts/Layout.astro";
 <style lang="scss">
     section.hero {
         height: calc(100svh - 87px);
+    }
+    .hero-text {
+        background-color: rgba(255, 255, 255, 0.4);
+        backdrop-filter: blur(10px);
+        // backdrop-filter: opacity(20%);
     }
 </style>

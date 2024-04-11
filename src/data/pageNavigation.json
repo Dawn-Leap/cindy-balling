@@ -8,8 +8,24 @@
         "hasAnnouncements": true
     },
     {
+        "name": "Programs",
+        "path": "/programs",
+        "isButton": false,
+        "isDropdown": false,
+        "dropdownItems": null,
+        "hasAnnouncements": false
+    },
+    {
         "name": "About",
         "path": "/about",
+        "isButton": false,
+        "isDropdown": false,
+        "dropdownItems": null,
+        "hasAnnouncements": false
+    },
+    {
+        "name": "Testimonials",
+        "path": "/testimonials",
         "isButton": false,
         "isDropdown": false,
         "dropdownItems": null,

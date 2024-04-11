@@ -270,3 +270,31 @@ ul {
     background-position: center;
     height: 100% !important;
 }
+
+#better-inline-booking-widget-container {
+    #better-inline-booking-widget {
+        position: relative;
+        overflow: hidden;
+        & > iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+    }
+}
+
+#better-inline-booking-widget-container {
+    #better-inline-booking-widget {
+        position: relative;
+        overflow: hidden;
+        & > iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+    }
+}

@@ -2,4 +2,31 @@
 import Layout from "../layouts/Layout.astro";
 ---
 
-<Layout title="register">Sign Up</Layout>
+<Layout title="Register">
+    <section id="booking-widget" class="container my-5">
+        <h2>Schedule Your First Free Coaching Call</h2>
+        <div
+            id="better-inline-booking-widget-container"
+            class="border py-3 px-4"
+        >
+            <!-- Practice Better Booking Widget: start -->
+            <div
+                id="better-inline-booking-widget"
+                class="better-inline-booking-widget m-auto"
+                data-url="https://my.practicebetter.io"
+                data-service="659c16379e2974286eb36eee"
+                data-hash="625734468800d1158772ce78"
+                data-theme="009977"
+                data-theme-accent="fff9b9"
+                style="width:100%;max-width:550px;height:800px;"
+                data-scrollbar-visible="false"
+            >
+            </div>
+            <script
+                type="text/javascript"
+                src="https://cdn.practicebetter.io/assets/js/booking.widget.js"
+            ></script>
+            <!-- Practice Better Booking Widget: end -->
+        </div>
+    </section>
+</Layout>

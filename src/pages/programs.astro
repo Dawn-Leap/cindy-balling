@@ -1,15 +1,36 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import ProgramSection from "../components/ProgramSection.astro";
 ---
 
 <Layout title="Programs">
     <div class="bg-accent text-center p-1">
         <h1>Programs</h1>
     </div>
-    <section class="container my-5">Program 1</section>
-    <section class="container my-5">Program 2</section>
-    <section class="container my-5">Program 3</section>
-    <section class="container my-5">Program 4</section>
+    <section id="programs-section" class="container">
+        <div class="row my-5 g-3">
+            <ProgramSection
+                headerText="Program 1"
+                heroImage="/images/Hero-Option-1.webp"
+                paragraphText="Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis, fuga illo. Nihil, ut molestiae quo aliquid consequuntur reprehenderit, officia eveniet quis suscipit placeat non aliquam obcaecati excepturi dolores quia unde."
+            />
+            <ProgramSection
+                headerText="Program 2"
+                heroImage="/images/fruit.webp"
+                paragraphText="Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem incidunt amet explicabo dolorum voluptatum harum dolore delectus temporibus modi dignissimos, perspiciatis aspernatur quis quo ipsum, non animi ipsa laboriosam obcaecati!"
+            />
+            <ProgramSection
+                headerText="Program 3"
+                heroImage="/images/exercise.webp"
+                paragraphText="Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repellendus quisquam minus enim pariatur nesciunt aspernatur corrupti fugiat odit nulla perferendis exercitationem, ducimus deserunt sequi earum accusamus a, animi quis repellat."
+            />
+            <ProgramSection
+                headerText="Program 4"
+                heroImage="/images/red-fruit.webp"
+                paragraphText="Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur, magni. Architecto neque molestias quibusdam suscipit ex. Quae, consectetur autem dolorem beatae, sunt modi impedit recusandae perspiciatis debitis maiores quod temporibus."
+            />
+        </div>
+    </section>
     <section id="booking-widget" class="my-5">
         <div class="container">
             <h2>Book Now</h2>
@@ -35,194 +56,6 @@ import Layout from "../layouts/Layout.astro";
                     src="https://cdn.practicebetter.io/assets/js/booking.widget.js"
                 ></script>
                 <!-- Practice Better Booking Widget: end -->
-            </div>
-        </div>
-    </section>
-    <section>
-        <div class="container my-5">
-            <h2>FAQs</h2>
-            <div class="accordion" id="accordionExample">
-                <div class="accordion-item">
-                    <h2 class="accordion-header">
-                        <button
-                            class="accordion-button"
-                            type="button"
-                            data-bs-toggle="collapse"
-                            data-bs-target="#collapseOne"
-                            aria-expanded="true"
-                            aria-controls="collapseOne"
-                        >
-                            What exactly is lifestyle medicine?
-                        </button>
-                    </h2>
-                    <div
-                        id="collapseOne"
-                        class="accordion-collapse collapse show"
-                        data-bs-parent="#accordionExample"
-                    >
-                        <div class="accordion-body bg-body-tertiary">
-                            Lifestyle medicine is a science-based approach to
-                            preventing, treating, and even reversing diseases by
-                            replacing unhealthy behaviors with positive ones,
-                            such as eating healthfully, being physically active,
-                            managing stress, avoiding substance abuse, and
-                            fostering social connections.
-                        </div>
-                    </div>
-                </div>
-                <div class="accordion-item">
-                    <h2 class="accordion-header">
-                        <button
-                            class="accordion-button collapsed"
-                            type="button"
-                            data-bs-toggle="collapse"
-                            data-bs-target="#collapseTwo"
-                            aria-expanded="false"
-                            aria-controls="collapseTwo"
-                        >
-                            How does the diabetes reversal program work?
-                        </button>
-                    </h2>
-                    <div
-                        id="collapseTwo"
-                        class="accordion-collapse collapse"
-                        data-bs-parent="#accordionExample"
-                    >
-                        <div class="accordion-body bg-body-tertiary">
-                            My diabetes reversal program, emphasizes the role of
-                            diet, exercise, and lifestyle changes in managing
-                            and potentially reversing diabetes. Unlike other
-                            programs, this program dives deeper into the root
-                            causes of diabetes and how to specifically address
-                            them in ways that are safe and most effective.
-                            Participants will learn how to eat healthily without
-                            riding the roller coaster of blood sugar ups and
-                            downs.
-                        </div>
-                    </div>
-                </div>
-                <div class="accordion-item">
-                    <h2 class="accordion-header">
-                        <button
-                            class="accordion-button collapsed"
-                            type="button"
-                            data-bs-toggle="collapse"
-                            data-bs-target="#collapseThree"
-                            aria-expanded="false"
-                            aria-controls="collapseThree"
-                        >
-                            What can I expect from the personal coaching
-                            sessions?
-                        </button>
-                    </h2>
-                    <div
-                        id="collapseThree"
-                        class="accordion-collapse collapse"
-                        data-bs-parent="#accordionExample"
-                    >
-                        <div class="accordion-body bg-body-tertiary">
-                            Personal coaching include tailored advice,
-                            personalized goals, and support throughout the
-                            journey. Your information is kept private. While
-                            program lessons provide the practical information
-                            and actions to take, coaching sessions will often
-                            focus on having the right attitude and mindset for
-                            success.
-                        </div>
-                    </div>
-                </div>
-                <div class="accordion-item">
-                    <h2 class="accordion-header">
-                        <button
-                            class="accordion-button collapsed"
-                            type="button"
-                            data-bs-toggle="collapse"
-                            data-bs-target="#collapseFour"
-                            aria-expanded="false"
-                            aria-controls="collapseFour"
-                        >
-                            Are the meal plans and recipes suitable for
-                            everyone? Can I still eat meat?
-                        </button>
-                    </h2>
-                    <div
-                        id="collapseFour"
-                        class="accordion-collapse collapse"
-                        data-bs-parent="#accordionExample"
-                    >
-                        <div class="accordion-body bg-body-tertiary">
-                            Eating a plant-based whole foods diet has been
-                            proven to be a healthy diet for anyone. This healthy
-                            diet has been shown to help reverse many chronic
-                            diseases like obesity, diabetes, heart disease, and
-                            even some cancers. While cutting out animal-based
-                            and processed foods can be a challenge, you can
-                            still eat delicious foods, have the energy you want,
-                            and feel great.
-                        </div>
-                    </div>
-                </div>
-                <div class="accordion-item">
-                    <h2 class="accordion-header">
-                        <button
-                            class="accordion-button collapsed"
-                            type="button"
-                            data-bs-toggle="collapse"
-                            data-bs-target="#collapseFive"
-                            aria-expanded="false"
-                            aria-controls="collapseFive"
-                        >
-                            How much time do I need to commit to the program
-                            each week?
-                        </button>
-                    </h2>
-                    <div
-                        id="collapseFive"
-                        class="accordion-collapse collapse"
-                        data-bs-parent="#accordionExample"
-                    >
-                        <div class="accordion-body bg-body-tertiary">
-                            The lesson material each week takes about an hour to
-                            view. Coaching sessions last up to one hour. Group
-                            chats are scheduled periodically as well. However,
-                            the goal of these programs is to help you adopt a
-                            healthy lifestyle. The habits you learn are to be
-                            implemented all day, every day, for the rest of your
-                            life.
-                        </div>
-                    </div>
-                </div>
-                <div class="accordion-item">
-                    <h2 class="accordion-header">
-                        <button
-                            class="accordion-button collapsed"
-                            type="button"
-                            data-bs-toggle="collapse"
-                            data-bs-target="#collapseSix"
-                            aria-expanded="false"
-                            aria-controls="collapseSix"
-                        >
-                            What makes your approach different from other health
-                            and wellness programs?
-                        </button>
-                    </h2>
-                    <div
-                        id="collapseSix"
-                        class="accordion-collapse collapse"
-                        data-bs-parent="#accordionExample"
-                    >
-                        <div class="accordion-body bg-body-tertiary">
-                            Many “health” programs are based on unsustainable
-                            behaviors. Fad diets, intense exercise programs, and
-                            radical health advice may produce results in the
-                            short term, but those results vanish when the
-                            program ends. A lifestyle medicine coach will teach
-                            you the proper way to make lifestyle changes that
-                            stick. Everything I teach is based on credible, well
-                            researched science. There are no fads here.
-                        </div>
-                    </div>
-                </div>
             </div>
         </div>
     </section>

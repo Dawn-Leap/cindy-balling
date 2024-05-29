@@ -6,11 +6,11 @@ import Layout from "../layouts/Layout.astro";
     <section
         id="hero"
         class="hero"
-        style="background-image: url(/images/health-hero-web.webp);"
+        style="background-image: url(/images/Hero-Option-5.webp);"
     >
         <div class="container h-100 col-xxl-8 px-4 py-5">
             <div class="row align-items-center h-100 g-5 py-5">
-                <div class="col-lg-6">
+                <div class="col-lg-6 p-4 hero-text">
                     <h1 class="display-5 fw-bold text-body-emphasis lh-1 mb-3">
                         Transform Your Health with Science and Heart
                     </h1>
@@ -45,149 +45,147 @@ import Layout from "../layouts/Layout.astro";
         <div class="container px-4 py-5">
             <h2 class="pb-2 border-bottom">A Program with Proven Results!</h2>
 
-            <div
+            <!-- <div
                 class="row row-cols-1 row-cols-lg-2 align-items-md-center g-5 py-5"
-            >
-                <div
-                    class="col-lg-4 col-xl-5 col-xxl-4 d-flex flex-column align-items-start gap-2"
-                >
-                    <!-- <h2 class="fw-bold text-body-emphasis">
+            > -->
+            <div class="row align-items-start gap-2">
+                <!-- <h2 class="fw-bold text-body-emphasis">
                         Brief punchy statement about this program
                     </h2> -->
-                    <p class="text-body-secondary">
-                        My lifestyle medicine programs are based on sound
-                        scientific methods to help you reverse chronic disease.
-                        My approach offers a sustainable path to improved health
-                        and wellbeing, addressing core areas like nutrition,
-                        physical activity, and stress management. Embrace a
-                        journey that's rewarding and rooted in evidence, where
-                        every step is guided by expert coaching and supported by
-                        a like-minded community.
-                    </p>
-                    <a href="/programs" class="btn btn-primary btn-lg"
-                        >Explore Programs</a
-                    >
-                </div>
+                <p class="text-body-secondary">
+                    My lifestyle medicine programs are based on sound scientific
+                    methods to help you reverse chronic disease. My approach
+                    offers a sustainable path to improved health and wellbeing,
+                    addressing core areas like nutrition, physical activity, and
+                    stress management. Embrace a journey that's rewarding and
+                    rooted in evidence, where every step is guided by expert
+                    coaching and supported by a like-minded community.
+                </p>
+                <a
+                    href="/programs"
+                    class="btn btn-accent-2 btn-lg col-md-6 mx-auto"
+                    >Explore Programs</a
+                >
+            </div>
 
-                <div class="col-lg-8 col-xl-7 col-xxl-8">
-                    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-4">
-                        <div class="col d-flex flex-column gap-2">
-                            <div
-                                class="feature-icon-small me-auto p-2 d-inline-flex align-items-center justify-content-center text-bg-primary bg-gradient fs-4 rounded-3"
-                            >
-                                <img
-                                    src="/icons/whistle-svgrepo-com.svg"
-                                    height="50"
-                                    alt="Whistle icon"
-                                />
-                            </div>
-                            <h4 class="fw-semibold mb-0 text-body-emphasis">
-                                Personal Coaching
-                            </h4>
-                            <p class="text-body-secondary">
-                                Ask questions, get feedback, and achieve your
-                                goals.
-                            </p>
+            <div class="row">
+                <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-4">
+                    <div class="col d-flex flex-column gap-2">
+                        <div
+                            class="feature-icon-small me-auto p-2 d-inline-flex align-items-center justify-content-center text-bg-primary bg-gradient fs-4 rounded-3"
+                        >
+                            <img
+                                src="/icons/whistle-svgrepo-com.svg"
+                                height="50"
+                                alt="Whistle icon"
+                            />
                         </div>
+                        <h4 class="fw-semibold mb-0 text-body-emphasis">
+                            Personal Coaching
+                        </h4>
+                        <p class="text-body-secondary">
+                            Ask questions, get feedback, and achieve your goals.
+                        </p>
+                    </div>
 
-                        <div class="col d-flex flex-column gap-2">
-                            <div
-                                class="feature-icon-small me-auto p-2 d-inline-flex align-items-center justify-content-center text-bg-primary bg-gradient fs-4 rounded-3"
-                            >
-                                <img
-                                    src="/icons/salad-svgrepo-com.svg"
-                                    height="50"
-                                    alt="Salad icon"
-                                />
-                            </div>
-                            <h4 class="fw-semibold mb-0 text-body-emphasis">
-                                Nutrition Planning
-                            </h4>
-                            <p class="text-body-secondary">
-                                Guides and meal plans based on a low-fat whole
-                                food plant-based diet.
-                            </p>
+                    <div class="col d-flex flex-column gap-2">
+                        <div
+                            class="feature-icon-small me-auto p-2 d-inline-flex align-items-center justify-content-center text-bg-primary bg-gradient fs-4 rounded-3"
+                        >
+                            <img
+                                src="/icons/salad-svgrepo-com.svg"
+                                height="50"
+                                alt="Salad icon"
+                            />
                         </div>
+                        <h4 class="fw-semibold mb-0 text-body-emphasis">
+                            Nutrition Planning
+                        </h4>
+                        <p class="text-body-secondary">
+                            Guides and meal plans based on a low-fat whole food
+                            plant-based diet.
+                        </p>
+                    </div>
 
-                        <div class="col d-flex flex-column gap-2">
-                            <div
-                                class="feature-icon-small me-auto p-2 d-inline-flex align-items-center justify-content-center text-bg-primary bg-gradient fs-4 rounded-3"
-                            >
-                                <img
-                                    src="/icons/running-sprint-svgrepo-com.svg"
-                                    height="50"
-                                    alt="Running icon"
-                                />
-                            </div>
-                            <h4 class="fw-semibold mb-0 text-body-emphasis">
-                                Exercise Instruction
-                            </h4>
-                            <p class="text-body-secondary">
-                                Custom workout plans to fit your interests and
-                                abilities.
-                            </p>
+                    <div class="col d-flex flex-column gap-2">
+                        <div
+                            class="feature-icon-small me-auto p-2 d-inline-flex align-items-center justify-content-center text-bg-primary bg-gradient fs-4 rounded-3"
+                        >
+                            <img
+                                src="/icons/running-sprint-svgrepo-com.svg"
+                                height="50"
+                                alt="Running icon"
+                            />
                         </div>
+                        <h4 class="fw-semibold mb-0 text-body-emphasis">
+                            Exercise Instruction
+                        </h4>
+                        <p class="text-body-secondary">
+                            Custom workout plans to fit your interests and
+                            abilities.
+                        </p>
+                    </div>
 
-                        <div class="col d-flex flex-column gap-2">
-                            <div
-                                class="feature-icon-small me-auto p-2 d-inline-flex align-items-center justify-content-center text-bg-primary bg-gradient fs-4 rounded-3"
-                            >
-                                <img
-                                    src="/icons/group-svgrepo-com.svg"
-                                    height="50"
-                                    alt="Group icon"
-                                />
-                            </div>
-                            <h4 class="fw-semibold mb-0 text-body-emphasis">
-                                Support Group
-                            </h4>
-                            <p class="text-body-secondary">
-                                Meet others and be accountable.
-                            </p>
+                    <div class="col d-flex flex-column gap-2">
+                        <div
+                            class="feature-icon-small me-auto p-2 d-inline-flex align-items-center justify-content-center text-bg-primary bg-gradient fs-4 rounded-3"
+                        >
+                            <img
+                                src="/icons/group-svgrepo-com.svg"
+                                height="50"
+                                alt="Group icon"
+                            />
                         </div>
+                        <h4 class="fw-semibold mb-0 text-body-emphasis">
+                            Support Group
+                        </h4>
+                        <p class="text-body-secondary">
+                            Meet others and be accountable.
+                        </p>
+                    </div>
 
-                        <div class="col d-flex flex-column gap-2">
-                            <div
-                                class="feature-icon-small me-auto p-2 d-inline-flex align-items-center justify-content-center text-bg-primary bg-gradient fs-4 rounded-3"
-                            >
-                                <img
-                                    src="/icons/journal-text.svg"
-                                    height="50"
-                                    alt="Book icon"
-                                />
-                            </div>
-                            <h4 class="fw-semibold mb-0 text-body-emphasis">
-                                Educational Materials
-                            </h4>
-                            <p class="text-body-secondary">
-                                Get access to a wealth of information,
-                                worksheets, guides, and presentations.
-                            </p>
+                    <div class="col d-flex flex-column gap-2">
+                        <div
+                            class="feature-icon-small me-auto p-2 d-inline-flex align-items-center justify-content-center text-bg-primary bg-gradient fs-4 rounded-3"
+                        >
+                            <img
+                                src="/icons/journal-text.svg"
+                                height="50"
+                                alt="Book icon"
+                            />
                         </div>
+                        <h4 class="fw-semibold mb-0 text-body-emphasis">
+                            Educational Materials
+                        </h4>
+                        <p class="text-body-secondary">
+                            Get access to a wealth of information, worksheets,
+                            guides, and presentations.
+                        </p>
+                    </div>
 
-                        <div class="col d-flex flex-column gap-2">
-                            <div
-                                class="feature-icon-small me-auto p-2 d-inline-flex align-items-center justify-content-center text-bg-primary bg-gradient fs-4 rounded-3"
-                            >
-                                <img
-                                    src="/icons/lab-svgrepo-com.svg"
-                                    height="50"
-                                    alt="Lab icon"
-                                />
-                            </div>
-                            <h4 class="fw-semibold mb-0 text-body-emphasis">
-                                Science Based
-                            </h4>
-                            <p class="text-body-secondary">
-                                My programs are founded on sound research.
-                            </p>
+                    <div class="col d-flex flex-column gap-2">
+                        <div
+                            class="feature-icon-small me-auto p-2 d-inline-flex align-items-center justify-content-center text-bg-primary bg-gradient fs-4 rounded-3"
+                        >
+                            <img
+                                src="/icons/lab-svgrepo-com.svg"
+                                height="50"
+                                alt="Lab icon"
+                            />
                         </div>
+                        <h4 class="fw-semibold mb-0 text-body-emphasis">
+                            Science Based
+                        </h4>
+                        <p class="text-body-secondary">
+                            My programs are founded on sound research.
+                        </p>
                     </div>
                 </div>
             </div>
+            <!-- </div> -->
         </div>
     </section>
-    <!-- <section id="testimonials" class="bg-accent px-4 py-5">
+    <section id="testimonials" class="bg-accent px-4 py-5">
         <div class="container">
             <h2
                 class="pb-2 border-bottom"
@@ -202,11 +200,10 @@ import Layout from "../layouts/Layout.astro";
                     <div class="shadow bg-white rounded text-center p-5 mb-3">
                         <blockquote class="lead">
                             "Before joining Cindy's program, I felt overwhelmed
-                            by my diabetes diagnosis. But with Cindy'’'s
-                            guidance on nutrition and exercise, I've not only
-                            reversed my diabetes, but I've also regained my
-                            confidence. It's not just a program; it's a life
-                            changer."
+                            by my diabetes diagnosis. But with Cindy's guidance
+                            on nutrition and exercise, I've not only reversed my
+                            diabetes, but I've also regained my confidence. It's
+                            not just a program; it's a life changer."
                         </blockquote>
                         <h3>James</h3>
                     </div>
@@ -239,25 +236,21 @@ import Layout from "../layouts/Layout.astro";
                 </div>
             </div>
         </div>
-    </section> -->
-    <section id="newsletter" class="px-4 py-5 bg-accent">
+    </section>
+    <section id="newsletter" class="px-4 py-5 bg-faded-primary">
         <div class="container">
             <div class="row align-items-center">
                 <form class="col-lg-7">
                     <h2 class="text-dark">
-                        Kickstart Your Path to Wellness Today—No Program Sign-Up
-                        Required!
+                        Kickstart Your Path to Wellness Today!
                     </h2>
                     <p>
-                        Unlock a healthier, more active life with our free
-                        newsletter. Discover simple yet effective exercise tips,
-                        delicious plant-based recipes, and gain exclusive access
-                        to insightful workshops and special offers. It's your
-                        chance to take meaningful steps towards wellness, guided
-                        by Cindy's expertise, without committing to a program.
-                        Dive in now for free resources that empower your journey
-                        to well-being. Sign up and let's embark on this
-                        transformative adventure together.
+                        <b>No Program Sign-Up Required</b> - Unlock a healthier,
+                        more active life with our free newsletter. It's your chance
+                        to move forward on a healthier path, guided by Cindy's expertise.
+                        Sign up now to recieve free resources each month that empower
+                        your journey to well-being. Let's embark on this transformative
+                        adventure together.
                     </p>
                     <div class="d-flex flex-column flex-sm-row w-100 gap-2">
                         <label for="newsletter1" class="visually-hidden"
@@ -269,7 +262,7 @@ import Layout from "../layouts/Layout.astro";
                             class="form-control"
                             placeholder="Email address"
                         />
-                        <button class="btn btn-primary" type="button">
+                        <button class="btn btn-secondary" type="button">
                             Subscribe
                         </button>
                     </div>
@@ -289,5 +282,10 @@ import Layout from "../layouts/Layout.astro";
 <style lang="scss">
     section.hero {
         height: calc(100svh - 87px);
+    }
+    .hero-text {
+        background-color: rgba(255, 255, 255, 0.4);
+        backdrop-filter: blur(10px);
+        // backdrop-filter: opacity(20%);
     }
 </style>

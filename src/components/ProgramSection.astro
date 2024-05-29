@@ -1,0 +1,39 @@
+---
+interface Props {
+    headerText: string;
+    heroImage: string;
+    paragraphText: string;
+}
+
+const { headerText, heroImage, paragraphText } = Astro.props;
+---
+
+<div class="programs-tile col-lg-6">
+    <div class="tile-content p-4" style=`background-image: url(${heroImage});`>
+        <div class="background-text p-4">
+            <h2>{headerText}</h2>
+            <p>{paragraphText}</p>
+            <button type="button" class="btn btn-secondary btn-md px-4">
+                Sign Up!
+            </button>
+        </div>
+    </div>
+</div>
+<style lang="scss">
+    .tile-content {
+        height: 100%;
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        display: flex;
+        justify-content: center;
+        .background-text {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background-color: rgba(255, 255, 255, 0.65);
+            backdrop-filter: blur(3px);
+        }
+    }
+</style>

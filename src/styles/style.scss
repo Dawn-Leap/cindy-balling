@@ -4,6 +4,7 @@ $theme-background: #ffffff;
 $theme-primary: #009944;
 $theme-secondary: #ffeb0c;
 $theme-accent: #a1a1e1;
+$theme-accent-2: #ff6677;
 
 // BOOTSTRAP OVERRIDE
 $primary: $theme-primary;
@@ -53,6 +54,18 @@ body {
 
 .bg-faded-secondary {
     background-color: $faded-secondary;
+}
+
+.btn-accent-2 {
+    background-color: $theme-accent-2;
+    &:hover {
+        background-color: #ff8997;
+    }
+}
+
+.no-decoration {
+    text-decoration: none;
+    list-style-type: none;
 }
 
 // div#announcements-bar {

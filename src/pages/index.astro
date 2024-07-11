@@ -249,12 +249,20 @@ import Layout from "../layouts/Layout.astro";
                 Kickstart Your Path to Wellness Today!
             </h2>
             <div class="row align-items-center">
-                <form class="col-lg-7">
+                <form
+                    name="newsletter"
+                    method="POST"
+                    data-netlify="true"
+                    data-netlify-honeypot="bot-field"
+                    onsubmit="handleFormSubmit()"
+                    class="col-lg-7"
+                >
+                    <input type="hidden" name="form-name" value="newsletter" />
                     <p>
                         <b>No Program Sign-Up Required</b> - Unlock a healthier,
                         more active life with our free newsletter. It's your chance
                         to move forward on a healthier path, guided by Cindy's expertise.
-                        Sign up now to recieve free resources each month that empower
+                        Sign up now to receive free resources each month that empower
                         your journey to well-being. Let's embark on this transformative
                         adventure together.
                     </p>
@@ -264,15 +272,30 @@ import Layout from "../layouts/Layout.astro";
                         >
                         <input
                             id="newsletter1"
-                            type="text"
+                            type="email"
                             class="form-control"
+                            name="email"
                             placeholder="Email address"
+                            required
                         />
-                        <button class="btn btn-secondary" type="button">
+                        <button class="btn btn-secondary" type="submit">
                             Subscribe
                         </button>
                     </div>
                 </form>
+                <div id="thank-you-message" style="display:none;">
+                    <p>
+                        Thank you for subscribing! Please check your email to
+                        confirm your subscription.
+                    </p>
+                </div>
+
+                <script>
+                    function handleFormSubmit() {
+                        console.log("submitted");
+                    }
+                </script>
+
                 <div class="col-lg-5 text-center">
                     <img
                         src="/graphics/letter-graphic-5.svg"

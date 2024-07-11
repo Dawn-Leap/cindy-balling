@@ -250,11 +250,11 @@ import Layout from "../layouts/Layout.astro";
             </h2>
             <div class="row align-items-center">
                 <form
+                    id="newsletter-form"
                     name="newsletter"
                     method="POST"
                     data-netlify="true"
                     data-netlify-honeypot="bot-field"
-                    onsubmit="handleFormSubmit()"
                     class="col-lg-7"
                 >
                     <input type="hidden" name="form-name" value="newsletter" />
@@ -283,17 +283,52 @@ import Layout from "../layouts/Layout.astro";
                         </button>
                     </div>
                 </form>
-                <div id="thank-you-message" style="display:none;">
-                    <p>
-                        Thank you for subscribing! Please check your email to
-                        confirm your subscription.
-                    </p>
+                <div
+                    id="thank-you-message"
+                    class="col-lg-7 text-light"
+                    style="display:none;"
+                >
+                    <p>Thank you for subscribing!</p>
                 </div>
 
                 <script>
-                    function handleFormSubmit() {
-                        console.log("submitted");
-                    }
+                    document
+                        .getElementById("newsletter-form")
+                        ?.addEventListener("submit", function (event) {
+                            event.preventDefault();
+                            const form = event.target as HTMLFormElement | null;
+                            const thankYouMessage = document.getElementById(
+                                "thank-you-message"
+                            ) as HTMLElement | null;
+
+                            if (!form || !thankYouMessage) {
+                                return;
+                            }
+
+                            fetch("/", {
+                                method: "POST",
+                                headers: {
+                                    "Content-Type":
+                                        "application/x-www-form-urlencoded",
+                                },
+                                body: new URLSearchParams(
+                                    new FormData(form) as unknown as Record<
+                                        string,
+                                        string
+                                    >
+                                ).toString(),
+                            })
+                                .then(() => {
+                                    form.style.display = "none";
+                                    thankYouMessage.style.display = "block";
+                                })
+                                .catch((error) =>
+                                    alert(
+                                        "There was an error submitting the form: " +
+                                            error
+                                    )
+                                );
+                        });
                 </script>
 
                 <div class="col-lg-5 text-center">

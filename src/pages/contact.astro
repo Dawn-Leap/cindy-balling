@@ -9,6 +9,7 @@ import Layout from "../layouts/Layout.astro";
                 <div class="col-lg-6 col-xl-7 col-xxl-8">
                     <h1>Contact Me</h1>
                     <form
+                        id="contact-form"
                         name="contact-form"
                         method="POST"
                         data-netlify="true"
@@ -53,6 +54,53 @@ import Layout from "../layouts/Layout.astro";
                             >Submit</button
                         >
                     </form>
+                    <div id="thank-you-contact" style="display:none;">
+                        <p>
+                            Thank you for contacting me! I will get back to you
+                            shortly.
+                        </p>
+                    </div>
+                    <script>
+                        document
+                            .getElementById("contact-form")
+                            ?.addEventListener("submit", function (event) {
+                                console.log("completed");
+                                event.preventDefault();
+                                const form =
+                                    event.target as HTMLFormElement | null;
+                                const thankYouMessage = document.getElementById(
+                                    "thank-you-contact"
+                                ) as HTMLElement | null;
+
+                                if (!form || !thankYouMessage) {
+                                    return;
+                                }
+
+                                fetch("/", {
+                                    method: "POST",
+                                    headers: {
+                                        "Content-Type":
+                                            "application/x-www-form-urlencoded",
+                                    },
+                                    body: new URLSearchParams(
+                                        new FormData(form) as unknown as Record<
+                                            string,
+                                            string
+                                        >
+                                    ).toString(),
+                                })
+                                    .then(() => {
+                                        form.style.display = "none";
+                                        thankYouMessage.style.display = "block";
+                                    })
+                                    .catch((error) =>
+                                        alert(
+                                            "There was an error submitting the form: " +
+                                                error
+                                        )
+                                    );
+                            });
+                    </script>
                 </div>
                 <div class="col-lg-1 horizontal-divider">
                     <hr class="d-lg-none" />
